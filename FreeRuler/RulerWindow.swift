@@ -9,9 +9,10 @@
 import Cocoa
 
 class RulerWindow: NSPanel {
-	
-	var orientation: Orientation?
-	var ruler: Ruler?
+
+    @IBOutlet weak var rulerView: RulerView!
+    
+    var orientation: Orientation?
 
     override init(contentRect: NSRect, styleMask aStyle: NSWindow.StyleMask, backing bufferingType: NSWindow.BackingStoreType, defer flag: Bool) {
         super.init(contentRect: contentRect, styleMask: aStyle, backing: bufferingType, defer: flag)
@@ -19,11 +20,6 @@ class RulerWindow: NSPanel {
         self.isMovableByWindowBackground = true
         self.backgroundColor = NSColor(calibratedRed: 255/255, green: 255/255, blue: 179/255, alpha: 1.0)
     }
-
-
-//	required init?(coder: NSCoder) {
-//	    super.init(coder: coder)
-//	}
 	
 	func drawMouseTick(_ mouseLoc: NSPoint) {
 		switch orientation! {

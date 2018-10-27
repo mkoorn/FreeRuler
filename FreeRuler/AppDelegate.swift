@@ -23,7 +23,7 @@ import Cocoa
 
 */
 
-enum Orientation {
+enum Orientation: Int {
 	case horizontal
 	case vertical
 }
@@ -35,8 +35,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	@IBOutlet weak var hRulerWindow: RulerWindow!
 	@IBOutlet weak var vRulerWindow: RulerWindow!
 
-	var hRuler: Ruler?
-	var vRuler: Ruler?
+//    var hRuler: Ruler?
+//    var vRuler: Ruler?
 	
 	var foregroundTimerInterval: TimeInterval = 10 / 1000
 	var backgroundTimerInterval: TimeInterval = 100 / 1000
@@ -46,23 +46,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		// Insert code here to initialize your application
 
-		hRuler = Ruler(length: 200, opacity: 0.9, orientation: .horizontal)
-		hRulerWindow.orientation = .horizontal
-		hRulerWindow.alphaValue = 0.9
-		hRulerWindow.isFloatingPanel = true
-		hRulerWindow.minSize.height = 50
-		hRulerWindow.maxSize.height = 50
-		hRulerWindow.minSize.width = 200
-		hRulerWindow.maxSize.width = 5000
-		
-		vRuler = Ruler(length: 200, opacity: 0.9, orientation: .vertical)
-		vRulerWindow.orientation = .vertical
-		vRulerWindow.alphaValue = 0.9
-		vRulerWindow.isFloatingPanel = true
-		vRulerWindow.minSize.width = 50
-		vRulerWindow.maxSize.width = 50
-		vRulerWindow.minSize.height = 200
-		vRulerWindow.maxSize.height = 5000
+//        hRuler = Ruler(length: 200, opacity: 0.9, orientation: .horizontal)
+        hRulerWindow.orientation = .horizontal
+        hRulerWindow.alphaValue = 0.9
+        hRulerWindow.isFloatingPanel = true
+        hRulerWindow.minSize.height = 50
+        hRulerWindow.maxSize.height = 50
+        hRulerWindow.minSize.width = 200
+        hRulerWindow.maxSize.width = 5000
+        
+//        vRuler = Ruler(length: 200, opacity: 0.9, orientation: .vertical)
+        vRulerWindow.orientation = .vertical
+        vRulerWindow.alphaValue = 0.9
+        vRulerWindow.isFloatingPanel = true
+        vRulerWindow.minSize.width = 50
+        vRulerWindow.maxSize.width = 50
+        vRulerWindow.minSize.height = 200
+        vRulerWindow.maxSize.height = 5000
 	}
 	
 	func applicationDidBecomeActive(_ notification: Notification) {
