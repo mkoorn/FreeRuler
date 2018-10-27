@@ -16,14 +16,14 @@ class RulerView: NSView {
 		}
 	}
 
-    override func drawRect(dirtyRect: NSRect) {
-        super.drawRect(dirtyRect)
+    override func draw(_ dirtyRect: NSRect) {
+        super.draw(dirtyRect)
 
         // Drawing code here.
 		
     }
 	
-	override func mouseDown(theEvent: NSEvent) {
+	override func mouseDown(with theEvent: NSEvent) {
 		// println(theEvent.deltaX)
 	}
 

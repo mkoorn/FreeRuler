@@ -16,7 +16,7 @@ class Ruler: NSObject {
 	override init() {
 		self.length = 200
 		self.opacity = 1
-		self.orientation = .Horizontal
+		self.orientation = .horizontal
 	}
 	
 	init(length: Int, opacity: Float, orientation: Orientation) {
